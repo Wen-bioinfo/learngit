@@ -113,3 +113,7 @@ MINLEN，规定read被切除后至少需要保留的长度，如果低于该长�
 	[root@localhost annovar]# gtfToGenePred -genePredExt ricedb/rapdb_2018.gtf ricedb/Os_refGene_rapdb.txt
 	// 获得各个基因的RNA序列信息
 [root@localhost annovar]# retrieve_seq_from_fasta.pl --format refGene --seqfile ricedb/IRGSP-1.0_genome.fasta ricedb/Os_refGene_rapdb.txt --out ricedb/Os_refGeneMrna_rapdb.fa > ricedb/rapdb_log 2>&1
+
+#### 测试
+
+	[liwen@localhost h5-yl_190408]$ awk 'BEGIN{FS=OFS="\t"}NR<=FNR{id=$1"\t"$5; pos[id]=$2; ref[id]=$4; alt[id]=$6}NR>FNR{name=$1"\t"$2; if (name in pos) {$2=pos[name]; $4=ref[name]; $5=alt[name]; print $0}}' output/pool/variant/H5-yl-pool2yl.filter.HC.index_dep10_yl-homo-unique_sig_candidate_rap output/pool/H5-yl-pool2yl.filter.HC.vcf > output/pool/variant/H5-yl-pool2yl.filter.HC.index_dep10_yl-homo-unique_sig_candidate.vcf
