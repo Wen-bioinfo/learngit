@@ -1,1 +1,0 @@
-<attachment contenteditable="false" data-atts="%5B%5D" data-aid=".atts-fd80232f-57a4-4ed3-8a10-3540a186c2b5"></attachment><p>Git is a distributed version control system. Git is free software distributed under the GPL. I am trying to use it. Yes, it is useful!</p><p><br></p>
