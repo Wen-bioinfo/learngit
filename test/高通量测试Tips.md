@@ -89,6 +89,7 @@ MINLEN，规定read被切除后至少需要保留的长度，如果低于该长�
 #### 建立水稻所需库
 
 > 无需root权限建库，这里只是为了便于其他用户今后可以直接使用
+
 	// 创建一个新目录
 	[root@localhost annovar]# mkdir ricedb
 	// 准备建库所需基因组序列及注释文件（gtf格式）
@@ -102,6 +103,6 @@ MINLEN，规定read被切除后至少需要保留的长度，如果低于该长�
 	// gtf转成GenePred文件
 	[root@localhost annovar]# gtfToGenePred -genePredExt ricedb/msu_release7.gtf ricedb/Os_refGene_msu.txt
 	// 获得各个基因的RNA序列信息
-	[root@localhost annovar]# retrieve_seq_from_fasta.pl --format refGene --seqfile ricedb/IRGSP-1.0_genome.fasta ricedb/Os_refGene_msu.txt --out ricedb/Os_refGeneMrna.fa
+	[root@localhost annovar]# retrieve_seq_from_fasta.pl --format refGene --seqfile ricedb/IRGSP-1.0_genome.fasta ricedb/Os_refGene_msu.txt --out ricedb/Os_refGeneMrna_msu.fa
 
 	
