@@ -97,12 +97,13 @@ MINLEN，规定read被切除后至少需要保留的长度，如果低于该长�
 	
 	[root@localhost annovar]# cp /usr/36T/liwen/rice_rawdata/rapdb/IRGSP-1.0_genome.fasta ricedb/.
 	# 基因组序列信息
+
+#### 1. MSU
 	[root@localhost annovar]# awk 'BEGIN{FS=OFS="\t"}{if ($1~/Chr[1-9]$/) {gsub(/Chr/, "chr0", $1); print $0} else if ($1~/1[012]/) {gsub(/C/, "c", $1); print $0}}' /usr/36T/liwen/rice_rawdata/msu/msu_release7.gtf > ricedb/msu_release7.gtf
 	# 基因注释信息。修改染色体格式，如Chr1至chr01等
-
 	// gtf转成GenePred文件
 	[root@localhost annovar]# gtfToGenePred -genePredExt ricedb/msu_release7.gtf ricedb/Os_refGene_msu.txt
 	// 获得各个基因的RNA序列信息
-	[root@localhost annovar]# retrieve_seq_from_fasta.pl --format refGene --seqfile ricedb/IRGSP-1.0_genome.fasta ricedb/Os_refGene_msu.txt --out ricedb/Os_refGeneMrna_msu.fa
+	[root@localhost annovar]# retrieve_seq_from_fasta.pl --format refGene --seqfile ricedb/IRGSP-1.0_genome.fasta ricedb/Os_refGene_msu.txt --out ricedb/Os_refGeneMrna_msu.fa > msu_log 2>&1
 
 	
