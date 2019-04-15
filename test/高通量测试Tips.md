@@ -106,4 +106,6 @@ MINLEN，规定read被切除后至少需要保留的长度，如果低于该长�
 	// 获得各个基因的RNA序列信息
 	[root@localhost annovar]# retrieve_seq_from_fasta.pl --format refGene --seqfile ricedb/IRGSP-1.0_genome.fasta ricedb/Os_refGene_msu.txt --out ricedb/Os_refGeneMrna_msu.fa > msu_log 2>&1
 
+#### 2. RAPDB
+
 	
