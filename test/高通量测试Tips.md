@@ -109,4 +109,5 @@ MINLEN，规定read被切除后至少需要保留的长度，如果低于该长�
 #### 2. RAPDB
 	[root@localhost annovar]# cp /usr/36T/liwen/rice_rawdata/rapdb/IRGSP-1.0_representative_transcript_exon_2018-03-29.gtf ricedb/rapdb_2018.gtf
 	# 基因注释信息
-	
+	// gtf转成
+	[root@localhost annovar]# gtfToGenePred -genePredExt ricedb/rapdb_2018.gtf ricedb/Os_refGene_rapdb.txt
