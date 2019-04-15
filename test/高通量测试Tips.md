@@ -78,13 +78,15 @@ MINLEN，规定read被切除后至少需要保留的长度，如果低于该长�
 
 	[liwen@localhost hd86_nip_hd_171222]$ sh /usr/36T/liwen/shell_script/hiseq_trim.sh rawdata/late_1.fq.gz rawdata/late_2.fq.gz > late.log 2>&1 &
 
-### Annovar软件应用
+### **Annovar软件应用**
 
-> 安装：下载需edu类邮箱注册，从网上找到一个2018年的下载链接，解压至/opt，即可使用
+#### 安装
+
+下载需edu类邮箱注册，从网上找到一个2018年的下载链接，解压至/opt，即可使用
 
 	http://www.openbioinformatics.org/annovar/download/0wgxR2rIVP/annovar.latest.tar.gz
 
-> 建立水稻所需库
+#### 建立水稻所需库
 
 	// 创建一个新目录
 	[root@localhost annovar]# mkdir ricedb
