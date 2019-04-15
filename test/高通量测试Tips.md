@@ -112,3 +112,4 @@ MINLEN，规定read被切除后至少需要保留的长度，如果低于该长�
 	// gtf转成GenePred文件
 	[root@localhost annovar]# gtfToGenePred -genePredExt ricedb/rapdb_2018.gtf ricedb/Os_refGene_rapdb.txt
 	// 获得各个基因的RNA序列信息
+retrieve_seq_from_fasta.pl --format refGene --seqfile ricedb/IRGSP-1.0_genome.fasta ricedb/Os_refGene_msu.txt --out ricedb/Os_refGeneMrna_msu.fa > msu_log 2>&1
