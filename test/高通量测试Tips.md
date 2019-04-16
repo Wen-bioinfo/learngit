@@ -120,6 +120,6 @@ MINLEN，规定read被切除后至少需要保留的长度，如果低于该长�
 
 	[liwen@localhost h5-yl_190408]$ awk 'BEGIN{FS=OFS="\t"}{print $1,$2,$3,$4,$6}' output/pool/variant/H5-yl-pool2yl.filter.HC.index_dep10_yl-homo-unique_sig_candidate_rap > output/pool/variant/H5-yl-pool2yl.filter.HC.index_dep10_yl-homo-unique_sig_candidate_list
 
-	head -n 5 output/pool/variant/H5-yl-pool2yl.filter.HC.index_dep10_yl-homo
+	[liwen@localhost h5-yl_190408]$ head -n 5 output/pool/variant/H5-yl-pool2yl.filter.HC.index_dep10_yl-homo
 -unique_sig_candidate_list > tmp_list
-	annotate_variation.pl -out tmp -build Os-rapdb tmp_list /opt/annovar/ricedb > log 2>&1
+	[liwen@localhost h5-yl_190408]$ annotate_variation.pl -out tmp -build Os-rapdb tmp_list /opt/annovar/ricedb > log 2>&1
