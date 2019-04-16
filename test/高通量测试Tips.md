@@ -125,6 +125,8 @@ MINLEN，规定read被切除后至少需要保留的长度，如果低于该长�
 	[liwen@localhost h5-yl_190408]$ annotate_variation.pl -out tmp -build Os-rapdb tmp_list /opt/annovar/ricedb > log 2>&1
 
 #### 3. Ensembl
+	[liwen@localhost ricedb]$ pwd
+	/usr/36T/liwen/rice_rawdata/annovar/ricedb
 	// 从Ensembl下载数据
 	// 将染色体转成chr格式
 	[liwen@localhost ricedb]$ awk 'BEGIN{FS=OFS="\t"}{if ($0~/^#/) {print $0} else if ($1=="1" || $1~/^[2-9]/) {$1="chr0"$1; print $0} else {$1="chr"$1; print $0}}' Oryza_sativa.IRGSP-1.0.43.gtf > Oryza_sativa.ensembl.gtf
@@ -135,4 +137,5 @@ MINLEN，规定read被切除后至少需要保留的长度，如果低于该长�
 	// 获得各个基因的RNA序列信息
 	[liwen@localhost ricedb]$ retrieve_seq_from_fasta.pl --format refGene --seqfile Os-ensembl_genome.fa Os-ensembl_refGene.txt --out Os-ensembl_refGeneMrna.fa > Os-ensembl.log 2>&1
 	// 测试
-	[liwen@localhost ricedb]$ annotate_variation.pl -out tmp-ensem -build Os-ensembl tmp_list /usr/36T/liwen/rice_rawdata/annovar/ricedb > tmp.log 2>&1
+	[liwen@localhost ricedb]$ cd test
+	[liwen@localhost test]$ annotate_variation.pl -out tmp-ensem -build Os-ensembl tmp_list /usr/36T/liwen/rice_rawdata/annovar/ricedb > tmp.log 2>&1
