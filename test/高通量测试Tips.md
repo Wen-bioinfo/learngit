@@ -134,3 +134,4 @@ MINLEN，规定read被切除后至少需要保留的长度，如果低于该长�
 	[liwen@localhost ricedb]$ cp Oryza_sativa.IRGSP-1.0.dna.toplevel.fa Os-ensembl_genome.fa
 	// 获得各个基因的RNA序列信息
 	[liwen@localhost ricedb]$ retrieve_seq_from_fasta.pl --format refGene --seqfile Os-ensembl_genome.fa Os-ensembl_refGene.txt --out Os-ensembl_refGeneMrna.fa > Os-ensembl.log 2>&1
+	//
