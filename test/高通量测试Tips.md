@@ -132,4 +132,4 @@ MINLEN，规定read被切除后至少需要保留的长度，如果低于该长�
 	// gtf转成GenePred文件
 	[liwen@localhost ricedb]$ gtfToGenePred -genePredExt Oryza_sativa.ensembl.gtf Os-ensembl_refGene.txt
 	// 获得各个基因的RNA序列信息
-	[liwen@localhost ricedb]$ retrieve_seq_from_fasta.pl --format refGene --seqfile /usr/36T/liwen/rice_rawdata/rapdb/IRGSP-1.0_genome.fasta Os-ensembl_refGene.txt --out Os-ensembl_refGeneMrna.fa > Oryza_sativa.ensembl.log 2>&1
+	[liwen@localhost ricedb]$ retrieve_seq_from_fasta.pl --format refGene --seqfile Os-ensembl_genome.fa Os-ensembl_refGene.txt --out Os-ensembl_refGeneMrna.fa > Os-ensembl.log 2>&1
