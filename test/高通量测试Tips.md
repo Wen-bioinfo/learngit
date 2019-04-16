@@ -123,3 +123,8 @@ MINLEN，规定read被切除后至少需要保留的长度，如果低于该长�
 	[liwen@localhost h5-yl_190408]$ head -n 5 output/pool/variant/H5-yl-pool2yl.filter.HC.index_dep10_yl-homo
 -unique_sig_candidate_list > tmp_list
 	[liwen@localhost h5-yl_190408]$ annotate_variation.pl -out tmp -build Os-rapdb tmp_list /opt/annovar/ricedb > log 2>&1
+
+#### 3. Ensembl
+
+	// 将染色体转成chr格式
+	[liwen@localhost ricedb]$ awk 'BEGIN{FS=OFS="\t"}{if ($0~/^#/) {print $0} else if ($1=="1" || $1~/^[2-9]/) {$1="chr0"$1; print $0} else {$1="chr"$1; print $0}}' Oryza_sativa.IRGSP-1.0.43.gtf > Oryza_sativa.ensembl.gtf
