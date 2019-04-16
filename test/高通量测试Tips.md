@@ -128,3 +128,7 @@ MINLEN，规定read被切除后至少需要保留的长度，如果低于该长�
 
 	// 将染色体转成chr格式
 	[liwen@localhost ricedb]$ awk 'BEGIN{FS=OFS="\t"}{if ($0~/^#/) {print $0} else if ($1=="1" || $1~/^[2-9]/) {$1="chr0"$1; print $0} else {$1="chr"$1; print $0}}' Oryza_sativa.IRGSP-1.0.43.gtf > Oryza_sativa.ensembl.gtf
+
+	// gtf转成GenePred文件
+	[liwen@localhost ricedb]$ gtfToGenePred -genePredExt Oryza_sativa.ensembl.gtf Oryza_sativa.ensembl.txt
+	// 获得各个基因的RNA序列信息
